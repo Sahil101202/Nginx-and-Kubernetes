@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+#result {
+    margin-top: 20px;
+}

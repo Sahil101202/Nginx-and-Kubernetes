@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  nginx:
+    container_name: nginx-container
+    build:
+      context: ./nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - ml
+    networks:
+      - os-network
+
+  ml:
+    container_name: ml-container
+    build:
+      context: ./ml_container
+    ports:
+      - "5001:5000"
+    networks:
+      - os-network
+
+networks:
+  os-network:
