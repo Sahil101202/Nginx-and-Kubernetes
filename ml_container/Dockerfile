@@ -2,9 +2,14 @@
 FROM python:3.8-slim
 
 # Install pkg-config and HDF5
-RUN apt-get update && \
-    apt-get install -y pkg-config && \
-    apt-get install -y libhdf5-dev
+# Install build tools
+RUN apt-get update && apt-get install -y \
+    # Install pkg-config and HDF5
+    pkg-config \
+    libhdf5-dev \
+    gcc \
+    make \
+    libc-dev
 
 # Set the working directory in the container
 WORKDIR /app
