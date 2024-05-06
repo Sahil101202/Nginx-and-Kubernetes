@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   nginx:
+    image: nginx:latest
     container_name: nginx-container
     build:
       context: ./nginx
@@ -9,6 +10,9 @@ services:
       - "8080:80"
     depends_on:
       - ml
+    volumes:
+    - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    - ./nginx/html/:/usr/share/nginx/html/
     networks:
       - os-network
 

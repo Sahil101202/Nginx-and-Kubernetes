@@ -28,4 +28,4 @@ COPY . .
 EXPOSE 5000
 
 # Command to run the Python script
-CMD ["python", "ml_model.py"]
+CMD ["python", "app.py"]
