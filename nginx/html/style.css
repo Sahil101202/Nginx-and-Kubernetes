@@ -1,21 +1,76 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
 }
 
-h1 {
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
     text-align: center;
+    width: 100%;
 }
 
-input[type="file"] {
-    display: block;
-    margin: 0 auto 10px;
+header h1 {
+    margin: 0;
 }
 
-button {
-    display: block;
-    margin: 0 auto;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
-#result {
-    margin-top: 20px;
+.image-classification-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.image-classification {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    width: calc(33.333% - 2rem);
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-classification:hover {
+    transform: translateY(-5px);
+}
+
+.image-classification img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-classification .caption {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
 }

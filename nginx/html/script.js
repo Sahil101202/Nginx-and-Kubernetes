@@ -14,8 +14,9 @@ function classifyImage() {
         // Display classification result
         resultDiv.innerHTML = '';
         data.forEach(prediction => {
-            resultDiv.innerHTML += `<p>${prediction.label}: ${prediction.probability}</p>`;
+            const probabilityPercentage = (prediction.probability * 100).toFixed(2);
+            resultDiv.innerHTML += `<p>${prediction.label}: ${probabilityPercentage}%</p>`;
         });
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => console.error(('Error:', error)));
 }
