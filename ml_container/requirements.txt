@@ -1,3 +1,6 @@
 Flask
 tensorflow
 Werkzeug
+flask_cors
+pillow
+keras
