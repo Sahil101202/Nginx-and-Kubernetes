@@ -1,5 +1,5 @@
 # Use the official Python image as a base
-FROM python:3.8-slim
+FROM sahil101202/ml-backend:latest
 
 # Install pkg-config and HDF5
 # Install build tools

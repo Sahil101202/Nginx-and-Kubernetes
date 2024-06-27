@@ -1,20 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  # Unique key of the Deployment instance
   name: nginx-deployment
 spec:
+  # 3 Pods should exist at all times.
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-deployment
   template:
     metadata:
       labels:
-        app: nginx
+        # Apply this label to pods and default
+        # the Deployment label selector to this value
+        app: nginx-deployment
     spec:
       containers:
-      - name: nginx
-        image: your-nginx-image:tag
+      - name: nginx-container
+        # Run this image
+        image: sahil101202/nginx-final:latest
         ports:
         - containerPort: 80
 
@@ -23,19 +28,24 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ml-deployment
+  # Unique key of the Deployment instance
+  name: ml-container
 spec:
+  # 3 Pods should exist at all times.
   replicas: 3
   selector:
     matchLabels:
-      app: ml
+      app: ml-container
   template:
     metadata:
       labels:
-        app: ml
+        # Apply this label to pods and default
+        # the Deployment label selector to this value
+        app: ml-container
     spec:
       containers:
-      - name: ml
-        image: your-ml-image:tag
+      - name: ml-container
+        # Run this image
+        image: sahil101202/ml-final:latest
         ports:
         - containerPort: 5000

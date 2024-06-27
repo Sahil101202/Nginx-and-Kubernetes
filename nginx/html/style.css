@@ -20,57 +20,62 @@ header h1 {
     margin: 0;
 }
 
-main {
+.container {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    padding: 2rem;
-    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
 }
 
-.image-classification-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin-top: 2rem;
-}
-
-.image-classification {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+.login-container {
     text-align: center;
-    margin: 1rem;
-    width: calc(33.333% - 2rem);
-    transition: transform 0.2s ease-in-out;
+    margin-bottom: 20px;
 }
 
-.image-classification:hover {
-    transform: translateY(-5px);
+.login-container h2 {
+    margin-bottom: 10px;
 }
 
-.image-classification img {
+.login-container p {
+    margin-bottom: 20px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container h3 {
+    margin-bottom: 10px;
+}
+
+#imageUpload {
+    margin-bottom: 10px;
+}
+
+#imagePreview {
+    margin-bottom: 10px;
+}
+
+#uploadedImage {
     max-width: 100%;
-    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.image-classification .caption {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    color: #666;
-}
-
-footer {
-    background-color: #333;
+#getClass {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4e5bff;
     color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 1.5rem;
-    width: 100%;
+    cursor: pointer;
 }
 
-footer p {
-    margin: 0;
+#imageClass {
+    margin-top: 10px;
 }

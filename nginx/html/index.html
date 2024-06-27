@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Classification</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Image Classification</h1>
+        <h1>Operating System Project</h1>
     </header>
-    <main>
-        <input type="file" id="imageInput" accept="image/*">
-        <button onclick="classifyImage()">Classify</button>
-        <div id="result"></div>
-        <div class="image-classification-container">
-            <!-- Image classification elements will be inserted here by JavaScript -->
+    <div class="container">
+        <div class="login-container">
+            <h2>Image Classification!</h2>
+            <p>This is a Project to Learn about Kubernetes and Load Balancing.</p>
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2023 Image Classification</p>
-    </footer>
-    <script src="./script.js"></script>
+        <div class="image-container">
+            <h3>Upload your image</h3>
+            <input type="file" id="imageUpload" accept="image/*">
+            <div id="imagePreview">
+                <img id="uploadedImage" src="" alt="Your uploaded image will appear here" style="display:none;">
+            </div>
+            <button id="getClass">Get Class</button>
+            <div id="imageClass"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
